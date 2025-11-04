@@ -1,44 +1,52 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
-  },
-})
-</script>
-
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
-  </div>
+  <v-app>
+    <v-main>
+      <v-container class="text-center py-10">
+        <h1 class="text-h3 font-weight-bold mb-4 text-primary">SA Seguridad e Higiene</h1>
+        <h2 class="text-h5 mb-10">Asesoramiento Integral en Seguridad y Salud Ocupacional</h2>
+
+        <v-row>
+          <v-col cols="12" md="4">
+            <v-card>
+              <v-card-title class="font-weight-bold">Sobre mí</v-card-title>
+              <v-card-text>
+                Profesional con amplia experiencia en Seguridad e Higiene laboral. 
+                Brindo asesoramiento personalizado para empresas y obras.
+              </v-card-text>
+            </v-card>
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <v-card>
+              <v-card-title class="font-weight-bold">Servicios</v-card-title>
+              <v-card-text>
+                Auditorías, capacitaciones, planes de emergencia, gestión documental y 
+                seguimiento de normas legales vigentes.
+              </v-card-text>
+            </v-card>
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <v-card>
+              <v-card-title class="font-weight-bold">Contacto</v-card-title>
+              <v-card-text>
+                📞 Tel: (XXX) XXX-XXXX<br>
+                ✉️ Email: contacto@seguridadhigiene.com<br>
+                📍 San Pedro, Buenos Aires
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
+<script setup>
+</script>
+
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
+.text-primary {
+  color: #2E7D32; /* Verde Seguridad */
 }
 </style>
