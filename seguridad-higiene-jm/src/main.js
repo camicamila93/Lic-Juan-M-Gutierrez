@@ -8,12 +8,13 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-// Estilos globales (si usás)
+// Estilos globales
 import './style.css'
 
 const vuetify = createVuetify({
   components,
   directives,
+  
 })
 
 createApp(App)
