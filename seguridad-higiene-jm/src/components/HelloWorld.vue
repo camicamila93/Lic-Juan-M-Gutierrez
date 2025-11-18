@@ -1,43 +1,52 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
+  <v-app>
+    <v-main>
+      <v-container class="text-center py-10">
+        <h1 class="text-h3 font-weight-bold mb-4 text-primary">SA Seguridad e Higiene</h1>
+        <h2 class="text-h5 mb-10">Asesoramiento Integral en Seguridad y Salud Ocupacional</h2>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+        <v-row>
+          <v-col cols="12" md="4">
+            <v-card>
+              <v-card-title class="font-weight-bold">Sobre mí</v-card-title>
+              <v-card-text>
+                Profesional con amplia experiencia en Seguridad e Higiene laboral. 
+                Brindo asesoramiento personalizado para empresas y obras.
+              </v-card-text>
+            </v-card>
+          </v-col>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+          <v-col cols="12" md="4">
+            <v-card>
+              <v-card-title class="font-weight-bold">Servicios</v-card-title>
+              <v-card-text>
+                Auditorías, capacitaciones, planes de emergencia, gestión documental y 
+                seguimiento de normas legales vigentes.
+              </v-card-text>
+            </v-card>
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <v-card>
+              <v-card-title class="font-weight-bold">Contacto</v-card-title>
+              <v-card-text>
+                📞 Tel: (XXX) XXX-XXXX<br>
+                ✉️ Email: contacto@seguridadhigiene.com<br>
+                📍 San Pedro, Buenos Aires
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
+<script setup>
+</script>
+
 <style scoped>
-.read-the-docs {
-  color: #888;
+.text-primary {
+  color: #2E7D32; /* Verde Seguridad */
 }
 </style>
