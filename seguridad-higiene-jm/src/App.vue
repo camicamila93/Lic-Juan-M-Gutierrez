@@ -2,7 +2,7 @@
   <v-app>
     <!-- Menú superior -->
     <v-app-bar
-      color="blue-darken-4"
+      color="green darken-4"
       density="comfortable"
       elevate-on-scroll
       dark
