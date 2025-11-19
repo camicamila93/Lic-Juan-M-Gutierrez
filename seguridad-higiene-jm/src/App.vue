@@ -109,7 +109,8 @@ export default {
         { 
           titulo: "Obra industrial", 
           descripcion: "Supervisión de condiciones de seguridad en planta.", 
-          img: new URL('@/assets/evacuacion.jpg', import.meta.url).href 
+          img: "/evacuacion.jpg"
+
         },
         { 
           titulo: "Capacitaciones", 
