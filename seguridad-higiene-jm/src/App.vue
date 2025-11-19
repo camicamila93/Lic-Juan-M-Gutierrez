@@ -82,13 +82,13 @@
       <v-container>
         <v-row align="center" justify="center" class="text-center">
           <v-col cols="12" md="4">
-            <p class="mb-2">📞 Teléfono: +54 9 11 1234 5678</p>
+            <p class="mb-2">📞 Teléfono: +54 9 3329 57-033</p>
             <a
-              href="https://instagram.com/usuario.ejemplo"
+              href="https://www.instagram.com/jmg_seguridadehigiene/"
               target="_blank"
               class="white--text text-decoration-none"
             >
-              📷 Instagram: @usuario.ejemplo
+              📷 Instagram: jmg_seguridadehigiene
             </a>
             <p class="mt-2">📍 San Pedro, Buenos Aires</p>
           </v-col>
@@ -106,27 +106,46 @@ export default {
   data() {
     return {
       trabajos: [
-        { titulo: "Obra industrial", descripcion: "Supervisión de condiciones de seguridad en planta.", img: "https://via.placeholder.com/400x200" },
-        { titulo: "Capacitaciones", descripcion: "Charlas de seguridad laboral para empleados.", img: "https://via.placeholder.com/400x200" },
-        { titulo: "Consultorías", descripcion: "Asesoramiento en prevención de riesgos.", img: "https://via.placeholder.com/400x200" },
+        { 
+          titulo: "Obra industrial", 
+          descripcion: "Supervisión de condiciones de seguridad en planta.", 
+          img: new URL('@/assets/evacuacion.jpg', import.meta.url).href 
+        },
+        { 
+          titulo: "Capacitaciones", 
+          descripcion: "Charlas de seguridad laboral para empleados.", 
+          img: "https://via.placeholder.com/400x200" 
+        },
+        { 
+          titulo: "Consultorías", 
+          descripcion: "Asesoramiento en prevención de riesgos.", 
+          img: "https://via.placeholder.com/400x200" 
+        },
       ],
+
       servicios: [
-        { titulo: "Asesoramiento técnico", descripcion: "Diagnóstico y evaluación de condiciones de seguridad.", img: "https://via.placeholder.com/400x200" },
-        { titulo: "Auditorías", descripcion: "Control de cumplimiento normativo.", img: "https://via.placeholder.com/400x200" },
-        { titulo: "Capacitaciones", descripcion: "Charlas y entrenamientos personalizados.", img: "https://via.placeholder.com/400x200" },
+        { 
+          titulo: "Asesoramiento técnico", 
+          descripcion: "Diagnóstico y evaluación de condiciones de seguridad.", 
+          img: "https://via.placeholder.com/400x200" 
+        },
+        { 
+          titulo: "Auditorías", 
+          descripcion: "Control de cumplimiento normativo.", 
+          img: "https://via.placeholder.com/400x200" 
+        },
+        { 
+          titulo: "Capacitaciones", 
+          descripcion: "Charlas y entrenamientos personalizados.", 
+          img: "https://via.placeholder.com/400x200" 
+        },
       ],
     }
   },
-  methods: {
-    scrollTo(sectionId) {
-      const el = document.getElementById(sectionId)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
-      }
-    },
-  },
 }
 </script>
+
+
 
 <style>
 body {

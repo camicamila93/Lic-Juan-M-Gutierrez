@@ -14,7 +14,6 @@ import './style.css'
 const vuetify = createVuetify({
   components,
   directives,
-  
 })
 
 createApp(App)
