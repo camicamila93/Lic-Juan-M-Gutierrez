@@ -18,10 +18,10 @@
     <!-- Banner principal -->
     <v-container fluid class="pa-0">
       <v-img
-        src="@/assets/banner.jpg"
-        height="450"
-        class="d-flex align-center justify-center"
-        gradient="to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)"
+          src="@/assets/banner.jpg"
+          height="450"
+          class="banner-img"
+          gradient="to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)"
       >
         <div class="text-center white--text">
           <h1 class="text-h3 font-weight-bold mb-2">Juan Mateo Gutiérrez</h1>
@@ -149,11 +149,28 @@ export default {
 
 
 <style>
+html, body, #app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f7f7f7;
   color: #333;
   scroll-behavior: smooth;
+}
+#app, .v-application {
+  min-height: 100vh;
+  width: 100vw;
+}
+.banner-img {
+  width: 100vw !important;
+  height: 450px !important;
+  margin: 0 !important;
+  display: block !important;
 }
 h2 {
   color: #2e3b4e;
