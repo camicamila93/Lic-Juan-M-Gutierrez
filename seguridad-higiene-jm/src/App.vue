@@ -1,3 +1,4 @@
+
 <template>
   <v-app>
     <!-- Menú superior -->
@@ -18,10 +19,10 @@
     <!-- Banner principal -->
     <v-container fluid class="pa-0">
       <v-img
-          src="@/assets/banner.jpg"
-          height="450"
-          class="banner-img"
-          gradient="to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)"
+        src="@/assets/banner.jpg"
+        height="450"
+        class="d-flex align-center justify-center"
+        gradient="to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)"
       >
         <div class="text-center white--text">
           <h1 class="text-h3 font-weight-bold mb-2">Juan Mateo Gutiérrez</h1>
@@ -34,8 +35,9 @@
     <v-container id="about" class="text-center my-12">
       <h2 class="text-h4 mb-4">Sobre mí</h2>
       <p class="mx-auto" style="max-width: 700px;">
-        Soy profesional en Seguridad e Higiene, dedicado a garantizar entornos de trabajo seguros, eficientes y en cumplimiento con las normativas vigentes. 
-        Este espacio está destinado a contar mi recorrido profesional y compartir experiencias.
+        Soy Licenciado en Seguridad e Higiene con experiencia en prevención de riesgos laborales,
+        asesoramiento técnico y capacitaciones para empresas e instituciones.
+        Mi objetivo es garantizar ambientes de trabajo seguros, saludables y eficientes
       </p>
     </v-container>
 
@@ -50,7 +52,7 @@
           md="4"
         >
           <v-card class="mx-auto" max-width="400">
-            <v-img :src="trabajo.img" height="200"></v-img>
+            <v-img :src="trabajo.img" height="350" cover></v-img>
             <v-card-title>{{ trabajo.titulo }}</v-card-title>
             <v-card-text>{{ trabajo.descripcion }}</v-card-text>
           </v-card>
@@ -69,7 +71,7 @@
           md="4"
         >
           <v-card class="mx-auto" max-width="400">
-            <v-img :src="servicio.img" height="200"></v-img>
+            <v-icon :icon="servicio.icon" size="80" color="#1565c0"></v-icon>
             <v-card-title>{{ servicio.titulo }}</v-card-title>
             <v-card-text>{{ servicio.descripcion }}</v-card-text>
           </v-card>
@@ -109,70 +111,37 @@ export default {
         { 
           titulo: "Obra industrial", 
           descripcion: "Supervisión de condiciones de seguridad en planta.", 
-          img: "/evacuacion.jpg"
-
+          img: "/Obra industrial.png"
         },
         { 
           titulo: "Capacitaciones", 
           descripcion: "Charlas de seguridad laboral para empleados.", 
-          img: "https://via.placeholder.com/400x200" 
+          img: "/Capacitaciones.png"
         },
         { 
           titulo: "Consultorías", 
           descripcion: "Asesoramiento en prevención de riesgos.", 
-          img: "https://via.placeholder.com/400x200" 
+          img: "/Consultoria.png" 
         },
       ],
-
       servicios: [
         { 
-          titulo: "Asesoramiento técnico", 
-          descripcion: "Diagnóstico y evaluación de condiciones de seguridad.", 
-          img: "https://via.placeholder.com/400x200" 
+          titulo: "Asesoramiento Integral", 
+          descripcion: "Evaluaciones y planes de acción personalizados según las necesidades de tu empresa.", 
+          icon: "mdi-shield-check"
         },
         { 
-          titulo: "Auditorías", 
-          descripcion: "Control de cumplimiento normativo.", 
-          img: "https://via.placeholder.com/400x200" 
+          titulo: "Capacitaciones Laborales", 
+          descripcion: "Formación en seguridad, uso de elementos de protección y prevención de accidentes.", 
+          icon: "mdi-file-document-check"
         },
         { 
-          titulo: "Capacitaciones", 
-          descripcion: "Charlas y entrenamientos personalizados.", 
-          img: "https://via.placeholder.com/400x200" 
+          titulo: "Auditorías Técnicas", 
+          descripcion: "Inspecciones y control del cumplimiento de normas de seguridad e higiene.", 
+          icon: "mdi-school"
         },
-      ],
-    }
-  },
-}
+      ]
+    };
+  }
+};
 </script>
-
-
-
-<style>
-html, body, #app {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  scroll-behavior: smooth;
-}
-#app, .v-application {
-  min-height: 100vh;
-  width: 100vw;
-}
-.banner-img {
-  width: 100vw !important;
-  height: 450px !important;
-  margin: 0 !important;
-  display: block !important;
-}
-h2 {
-  color: #2e3b4e;
-}
-</style>
