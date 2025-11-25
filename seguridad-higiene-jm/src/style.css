@@ -1,11 +1,11 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
 
   color-scheme: white dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: lightblue;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #4f57fa;
+  color: blue;
   text-decoration: inherit;
 }
 a:hover {
-  color: #4f57fa;
+  color: blue;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  color: #1565c0 !important; /* Change text color to blue */
+  color: whitesmoke !important; /* Change text color to blue */
 }
 
 h1, h2 {
@@ -51,7 +51,8 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+
+  border-color: lightblue;
 }
 button:focus,
 button:focus-visible {
@@ -71,13 +72,41 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: lightblue;
+    background-color: lightblue
   }
   a:hover {
-    color: #747bff;
+    color: lightblue;
   }
   button {
     background-color: #f9f9f9;
   }
+}
+/* ----- HERO / BANNER ----- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url('/seguridad-bg.jpg'); /* desde public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
 }

@@ -3,7 +3,7 @@
   <v-app>
     <!-- Menú superior -->
     <v-app-bar
-      color="green darken-4"
+      color="blue darken-4"
       density="comfortable"
       elevate-on-scroll
       dark
@@ -17,19 +17,11 @@
     </v-app-bar>
 
     <!-- Banner principal -->
-    <v-container fluid class="pa-0">
-      <v-img
-        src="@/assets/banner.jpg"
-        height="450"
-        class="d-flex align-center justify-center"
-        gradient="to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)"
-      >
-        <div class="text-center white--text">
-          <h1 class="text-h3 font-weight-bold mb-2">Juan Mateo Gutiérrez</h1>
-          <h2 class="text-subtitle-1">Lic. en Seguridad e Higiene</h2>
-        </div>
-      </v-img>
-    </v-container>
+    <v-container class="hero" fluid>
+  <h1>Juan Mateo Gutiérrez</h1>
+  <h2>Lic. en Seguridad e Higiene</h2>
+</v-container>
+
 
     <!-- Sobre mí -->
     <v-container id="about" class="text-center my-12">
@@ -124,23 +116,24 @@ export default {
           img: "/Consultoria.png" 
         },
       ],
-      servicios: [
-        { 
-          titulo: "Asesoramiento Integral", 
-          descripcion: "Evaluaciones y planes de acción personalizados según las necesidades de tu empresa.", 
-          icon: "mdi-shield-check"
-        },
-        { 
-          titulo: "Capacitaciones Laborales", 
-          descripcion: "Formación en seguridad, uso de elementos de protección y prevención de accidentes.", 
-          icon: "mdi-file-document-check"
-        },
-        { 
-          titulo: "Auditorías Técnicas", 
-          descripcion: "Inspecciones y control del cumplimiento de normas de seguridad e higiene.", 
-          icon: "mdi-school"
-        },
-      ]
+     servicios: [
+  { 
+    titulo: "Asesoramiento Integral", 
+    descripcion: "Evaluaciones y planes de acción personalizados según las necesidades de tu empresa.", 
+    icon: "mdi-account-cog" // Más acorde al asesoramiento
+  },
+  { 
+    titulo: "Capacitaciones Laborales", 
+    descripcion: "Formación en seguridad, uso de elementos de protección y prevención de accidentes.", 
+    icon: "mdi-school" // Icono de capacitación
+  },
+  { 
+    titulo: "Auditorías Técnicas", 
+    descripcion: "Inspecciones y control del cumplimiento de normas de seguridad e higiene.", 
+    icon: "mdi-clipboard-check" // Control / auditoría
+  },
+]
+
     };
   }
 };
