@@ -1,24 +1,18 @@
-
 <template>
   <v-app>
-    <!-- Menú superior -->
-    <v-app-bar
-    <v-app-bar color="blue-darken-4" density="comfortable" dark>
+    <v-app-bar color="#33691E" density="comfortable" dark>
+      <v-toolbar-title class="font-weight-bold text-white">
+        Juan Mateo Gutiérrez
+        <v-icon left class="ml-2" >mdi-account-cog</v-icon>
+      </v-toolbar-title>
 
-  <v-toolbar-title class="font-weight-bold text-white">
-    Juan Mateo Gutiérrez
-  </v-toolbar-title>
+      <v-spacer></v-spacer>
 
-  <v-spacer></v-spacer>
-
-  <!-- BOTONES CON ANCHOR A SECCIONES -->
-  <v-btn href="#about" variant="text">Sobre mí</v-btn>
-  <v-btn href="#services" variant="text">Servicios</v-btn>
-  <v-btn href="#works" variant="text">Trabajos</v-btn>
-  <v-btn href="#contact" variant="text">Contacto</v-btn>
-
-</v-app-bar>
-
+      <v-btn href="#about" variant="text">Sobre mí</v-btn>
+      <v-btn href="#services" variant="text">Servicios</v-btn>
+      <v-btn href="#works" variant="text">Trabajos realizados</v-btn>
+      <v-btn href="#contact" variant="text">Contacto</v-btn>
+    </v-app-bar>
 
     <!-- Banner principal -->
     <v-container class="hero" fluid>
@@ -29,17 +23,18 @@
 
     <!-- Sobre mí -->
     <v-container id="about" class="text-center my-12">
-      <h2 class="text-h4 mb-4">Sobre mí</h2>
+      <h3 class="text-h4 mb-4">Sobre mí</h3>
       <p class="mx-auto" style="max-width: 700px;">
         Soy Licenciado en Seguridad e Higiene con experiencia en prevención de riesgos laborales,
         asesoramiento técnico y capacitaciones para empresas e instituciones.
-        Mi objetivo es garantizar ambientes de trabajo seguros, saludables y eficientes
+        Mi objetivo es garantizar ambientes de trabajo seguros, saludables y eficientes.
+        Aguante bokita
       </p>
     </v-container>
 
     <!-- Trabajos realizados -->
     <v-container id="projects" class="text-center my-12">
-      <h2 class="text-h4 mb-4">Trabajos realizados</h2>
+      <h3 class="text-h4 mb-4">Trabajos realizados</h3>
       <v-row>
         <v-col
           v-for="(trabajo, i) in trabajos"
@@ -58,7 +53,7 @@
 
     <!-- Servicios -->
     <v-container id="services" class="text-center my-12">
-      <h2 class="text-h4 mb-4">Servicios</h2>
+      <h5 class="text-h4 mb-4">Servicios</h5>
       <v-row>
         <v-col
           v-for="(servicio, i) in servicios"
@@ -76,15 +71,16 @@
     </v-container>
 
     <!-- Contacto -->
-    <v-footer id="contact" color="blue-darken-4" class="white--text pa-10">
+    <v-footer id="contact" color="#33691E" class="white--text pa-10">
       <v-container>
         <v-row align="center" justify="center" class="text-center">
           <v-col cols="12" md="4">
             <p class="mb-2">📞 Teléfono: +54 9 3329 57-033</p>
             <a
-              href="https://www.instagram.com/jmg_seguridadehigiene/"
-              target="_blank"
-              class="white--text text-decoration-none"
+            href="https://www.instagram.com/jmg_seguridadehigiene/"
+            target="_blank"
+            style="color: white !important;"
+            class="white--text text-decoration-none"
             >
               📷 Instagram: jmg_seguridadehigiene
             </a>
