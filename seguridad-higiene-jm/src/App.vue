@@ -3,18 +3,22 @@
   <v-app>
     <!-- Menú superior -->
     <v-app-bar
-      color="blue darken-4"
-      density="comfortable"
-      elevate-on-scroll
-      dark
-    >
-      <v-toolbar-title class="font-weight-bold">Juan Mateo Gutiérrez</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn text @click="scrollTo('about')">Sobre mí</v-btn>
-      <v-btn text @click="scrollTo('projects')">Trabajos</v-btn>
-      <v-btn text @click="scrollTo('services')">Servicios</v-btn>
-      <v-btn text @click="scrollTo('contact')">Contacto</v-btn>
-    </v-app-bar>
+    <v-app-bar color="blue-darken-4" density="comfortable" dark>
+
+  <v-toolbar-title class="font-weight-bold text-white">
+    Juan Mateo Gutiérrez
+  </v-toolbar-title>
+
+  <v-spacer></v-spacer>
+
+  <!-- BOTONES CON ANCHOR A SECCIONES -->
+  <v-btn href="#about" variant="text">Sobre mí</v-btn>
+  <v-btn href="#services" variant="text">Servicios</v-btn>
+  <v-btn href="#works" variant="text">Trabajos</v-btn>
+  <v-btn href="#contact" variant="text">Contacto</v-btn>
+
+</v-app-bar>
+
 
     <!-- Banner principal -->
     <v-container class="hero" fluid>
