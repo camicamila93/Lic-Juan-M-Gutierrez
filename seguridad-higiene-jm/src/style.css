@@ -2,98 +2,123 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 600;
-
-  color-scheme: white dark;
+  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: lightblue;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   font-weight: 500;
-  color: blue;
-  text-decoration: inherit;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: 0.20.5s ease;
 }
+
 a:hover {
-  color: blue;
+  color: #1565C0;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  display: block; /* sacamos el centrado forzado para evitar layout roto */
   min-width: 320px;
   min-height: 100vh;
-  color: whitesmoke !important; /* Change text color to blue */
+  color: whitesmoke;
 }
 
-h1, h2 {
-  color: whitesmoke !important;
-  font-size: 3.5em !important;
-  font-weight: bold !important;
-  line-height: 1.1;
-}
-h3, h4,h5 {
-  color: #0D47A1 !important;
-  font-size: 3.5em !important;
-  font-weight: bold !important;
-  line-height: 1.1;
+/* --- Tamaños optimizados --- */
+h1 {
+  font-size: 5.6rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
+h3 {
+  font-size: 5.6rem;
+  font-weight: 800;
+  color: #0D47A1;
+}
+
+h4 {
+  font-size: 5.6rem;
+  font-weight: 800;
+  color: #0D47A1;
+}
+
+h5 {
+  font-size: 5.6rem;
+  font-weight: 800;
+  color: #0D47A1;
+}
+
+/* --- Botones más visibles --- */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  border-radius: 10px;
+  padding: 0.7em 1.4em;
+  font-size: 1.2rem;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #2E7D32;
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: 0.2s ease;
 }
-button:hover {
 
-  border-color: lightblue;
+button:hover {
+  border-color: #1565C0;
+  transform: scale(1.05);
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px auto #0D47A1;
 }
 
 .card {
   padding: 2em;
 }
 
-  #app {
+#app {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: lightblue;
-    background-color: lightblue
-  }
-  a:hover {
-    color: lightblue;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* --- 👇 Responsive 👇 --- */
+@media (max-width: 960px) { /* tablet y laptop chica */
+  h1 { font-size: 5.6rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 5.6rem; }
+  h4 { font-size: 5.6rem; }
+  h5 { font-size: 5.6rem; }
+  a  { font-size: 1.1rem; }
+  button { font-size: 1.15rem; }
 }
+
+@media (max-width: 600px) { /* celular */
+  h1 { font-size: 2.7rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.6rem; }
+  h4 { font-size: 1.4rem; }
+  h5 { font-size: 1.3rem; }
+  a  { font-size: 1rem; }
+  button { font-size: 1.05rem; padding: 0.6em 1.1em; }
+}
+
 /* ----- HERO / BANNER ----- */
 .hero {
   position: relative;
-  width: 100%;
-  height: 70vh;
-  background-image: url('/banner.png'); /* desde public */
+  width: 100vw;  /* ocupa el 100% del ancho de pantalla */
+  height: 100vh; /* ocupa toda la pantalla sin pilares */
+  background-image: url('/banner.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,18 +126,140 @@ button:focus-visible {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white !important;
+  color: white;
+  text-align: center;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.30);
   z-index: 1;
 }
 
 .hero > * {
   position: relative;
   z-index: 2;
+}
+/* ───────────── TÍTULOS DE SECCIÓN (más chicos, equilibrados) ───────────── */
+#about h3,
+#projects h4,
+#services h5 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem); /* antes era 3.8rem → ahora equilibrado */
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* ───────────── PÁRRAFOS PRINCIPALES DE SECCIONES (mejor proporcionados) ───────────── */
+#about p,
+#projects p,
+#services .v-card-text,
+#projects .v-card-text {
+  font-size: clamp(1rem, 1.6vw, 1.25rem); /* antes 1.6rem → ahora normal/grande suave */
+  line-height: 1.5;
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* ───────── CONTACTO: tamaños equilibrados ───────── */
+#contact p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+}
+
+#contact a {
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  font-weight: 700;
+  color: white !important;
+}
+
+/* ───────── CENTRAR ÍCONOS EN CARDS ───────── */
+.v-card .v-icon {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.v-card {
+  text-align: center; /* centra texto dentro de cada card */
+}
+
+/* ───────── CENTRAR TÍTULOS DE CARDS ───────── */
+.v-card-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ───────── CENTRAR ÍCONOS DENTRO DE V-COL (backup, por si Vuetify lo pisa) ───────── */
+.v-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ───────── Footer Contacto centrado completo ───────── */
+#contact .v-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  margin: 0 auto;
+}
+/* ───────── FOOTER CONTACTO: reset de headers grandes ───────── */
+#contact h3,
+#contact h4,
+#contact h5 {
+  font-size: clamp(1.4rem, 2vw, 1.8rem) !important;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ───────── Acomodo del texto del footer ───────── */
+#contact p, 
+#contact a {
+  font-size: clamp(1rem, 1.5vw, 1.2rem) !important;
+  text-align: center;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ───────── Centrar íconos y ponerlos arriba del texto ───────── */
+#contact .v-col i,
+#contact .v-icon,
+#contact svg {
+  display: block !important;
+  margin-inline: auto !important;
+  margin-bottom: 8px;
+  font-size: 2rem !important;
+}
+
+/* ───────── Separar icono del contenido ───────── */
+#contact .contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* ───────── Forzar centrado completo del contenido del footer ───────── */
+#contact .v-row, 
+#contact .v-container, 
+#contact .v-col {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
 }
