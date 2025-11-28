@@ -25,10 +25,12 @@
     <v-container id="about" class="text-center my-12">
   <h3 class="about-title mb-4">Sobre mí</h3>
   <p class="about-text mx-auto" style="max-width: 800px;">
-        <p>Soy Licenciado en Seguridad e Higiene con experiencia en prevención de riesgos laborales,
-        asesoramiento técnico y capacitaciones para empresas e instituciones.</p>
+        <p>Soy Licenciado en Seguridad e Higiene con 
+          
+          
+        </p>
         <p> Mi objetivo es garantizar ambientes de trabajo seguros, saludables y eficientes.</p>
-        <p>Porque yo soy de boca papaaaaa boca boca boca bocaaaa</p>
+       
       </p>
     </v-container>
 
