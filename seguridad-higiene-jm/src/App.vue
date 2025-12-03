@@ -1,10 +1,27 @@
 <template>
   <v-app>
-    <v-app-bar color="#33691E" density="comfortable" dark>
-      <v-toolbar-title class="font-weight-bold text-white">
-        Juan Mateo Gutiérrez
-        <v-icon left class="ml-2" >mdi-account-cog</v-icon>
+
+    <v-app-bar
+      class="d-flex align-center"
+      color="#33691E"
+      density="comfortable"
+      dark
+    >
+
+      <!-- Título + Logo -->
+      <v-toolbar-title class="pa-0" style="width: 100%;">
+        <div class="d-flex align-center" style="width:100%;">
+          <span class="font-weight-bold text-white">Juan Mateo Gutierrez</span>
+          <v-spacer />
+          <v-img
+            src="/logo.jpg"
+            max-width="50"
+            max-height="50"
+            contain
+          />
+        </div>
       </v-toolbar-title>
+
 
       <v-spacer></v-spacer>
 
@@ -16,7 +33,7 @@
 
     <!-- Banner principal -->
     <v-container class="hero" fluid>
-  <h1>Juan Mateo Gutiérrez</h1>
+  <h1>Juan Mateo Gutierrez</h1>
   <h2>Lic. en Seguridad e Higiene</h2>
 </v-container>
 
@@ -25,11 +42,9 @@
     <v-container id="about" class="text-center my-12">
   <h3 class="about-title mb-4">Sobre mí</h3>
   <p class="about-text mx-auto" style="max-width: 800px;">
-        <p>Soy Licenciado en Seguridad e Higiene con 
-          
-          
+        <p>Soy Licenciado en Seguridad e Higiene con mas de 5 años de experiencia aplicada en los diferentes rubros como agro industria, salud, logística, obras, estaciones de servicio entre otros.
         </p>
-        <p> Mi objetivo es garantizar ambientes de trabajo seguros, saludables y eficientes.</p>
+        <p> Mi objetivo es garantizar ambientes de trabajo seguros, saludables y eficientes para mejorar la productividad de los trabajadores y de las organizaciones.</p>
        
       </p>
     </v-container>
@@ -90,7 +105,7 @@
           </v-col>
         </v-row>
         <v-row justify="center" class="mt-4">
-          <p class="text-caption">© {{ new Date().getFullYear() }} Juan Mateo Gutiérrez - Todos los derechos reservados</p>
+          <p class="text-caption">© {{ new Date().getFullYear() }} Juan Mateo Gutierrez - Todos los derechos reservados</p>
         </v-row>
       </v-container>
     </v-footer>
@@ -126,12 +141,12 @@ export default {
   },
   { 
     titulo: "Capacitaciones Laborales", 
-    descripcion: "Formación en seguridad, uso de elementos de protección y prevención de accidentes.", 
+    descripcion: "Formaciones teóricas y practicas de seguridad laboral basadas en el organigrama de cada empresa.", 
     icon: "mdi-school" // Icono de capacitación
   },
   { 
     titulo: "Auditorías Técnicas", 
-    descripcion: "Inspecciones y control del cumplimiento de normas de seguridad e higiene.", 
+    descripcion: "Inspecciones y control del cumplimiento de normas de Seguridad e Higiene.", 
     icon: "mdi-clipboard-check" // Control / auditoría
   },
 ]
