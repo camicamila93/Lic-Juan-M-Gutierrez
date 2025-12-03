@@ -9,15 +9,17 @@
     >
 
       <!-- Título + Logo -->
-      <v-toolbar-title class="pa-0" style="width: 100%;">
-        <div class="d-flex align-center" style="width:100%;">
+      <v-toolbar-title class="pa-0">
+        <div class="d-flex align-center" >
           <span class="font-weight-bold text-white">Juan Mateo Gutierrez</span>
+          <v-spacer style="max-width:5px;" />
           <v-spacer />
           <v-img
             src="/logo.jpg"
-            max-width="50"
-            max-height="50"
+            max-width="45"
+            max-height="45"
             contain
+            class="ml-0 rounded-circle"
           />
         </div>
       </v-toolbar-title>
