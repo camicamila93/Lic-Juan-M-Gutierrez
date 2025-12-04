@@ -29,31 +29,31 @@ body {
 
 /* --- Tamaños optimizados --- */
 h1 {
-  font-size: 5.6rem;
+  font-size: clamp(2rem, 6vw, 5.6rem);
   font-weight: 800;
   margin-bottom: 0.3rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 5.6rem;
+  font-size: clamp(1.5rem, 4vw, 5.6rem);
   font-weight: 800;
   color: #0D47A1;
 }
 
 h4 {
-  font-size: 5.6rem;
+  font-size: clamp(1.5rem, 4vw, 5.6rem);
   font-weight: 800;
   color: #0D47A1;
 }
 
 h5 {
-  font-size: 5.6rem;
+  font-size: clamp(1.5rem, 4vw, 5.6rem);
   font-weight: 800;
   color: #0D47A1;
 }
@@ -104,20 +104,25 @@ button:focus-visible {
 }
 
 @media (max-width: 600px) { /* celular */
-  h1 { font-size: 2.7rem; }
-  h2 { font-size: 1.8rem; }
-  h3 { font-size: 1.6rem; }
-  h4 { font-size: 1.4rem; }
-  h5 { font-size: 1.3rem; }
-  a  { font-size: 1rem; }
-  button { font-size: 1.05rem; padding: 0.6em 1.1em; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.4rem; }
+  h4 { font-size: 1.3rem; }
+  h5 { font-size: 1.2rem; }
+  a  { font-size: 0.95rem; }
+  button { font-size: 1rem; padding: 0.6em 1em; }
+  
+  .hero {
+    min-height: 60vh;
+    padding: 1rem;
+  }
 }
 
 /* ----- HERO / BANNER ----- */
 .hero {
   position: relative;
-  width: 100vw;  /* ocupa el 100% del ancho de pantalla */
-  height: 100vh; /* ocupa toda la pantalla sin pilares */
+  width: 100%;  /* ocupará el ancho del contenedor */
+  min-height: 100vh; /* al menos toda la pantalla */
   background-image: url('/banner.png');
   background-size: cover;
   background-position: center;
@@ -128,6 +133,8 @@ button:focus-visible {
   align-items: center;
   color: white;
   text-align: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .hero::before {
@@ -146,10 +153,10 @@ button:focus-visible {
 #about h3,
 #projects h4,
 #services h5 {
-  font-size: clamp(1.8rem, 4vw, 2.6rem); /* antes era 3.8rem → ahora equilibrado */
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  text-align: center;
+  font-size: clamp(1.4rem, 4vw, 2.4rem) !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
 }
 
 /* ───────────── PÁRRAFOS PRINCIPALES DE SECCIONES (mejor proporcionados) ───────────── */
@@ -177,30 +184,48 @@ button:focus-visible {
 }
 
 /* ───────── CENTRAR ÍCONOS EN CARDS ───────── */
-.v-card .v-icon {
+.v-card {
+  text-align: center !important;
   display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.v-card .v-icon {
+  display: block !important;
   justify-content: center !important;
   align-items: center !important;
   width: 100% !important;
-  margin: 0 auto !important;
-}
-
-.v-card {
-  text-align: center; /* centra texto dentro de cada card */
+  margin: 1rem auto !important;
+  padding: 0.5rem !important;
+  font-size: 4rem !important;
 }
 
 /* ───────── CENTRAR TÍTULOS DE CARDS ───────── */
 .v-card-title {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  font-weight: 600 !important;
+  padding: 1rem !important;
+}
+
+.v-card-text {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 1rem !important;
+  flex-grow: 1 !important;
 }
 
 /* ───────── CENTRAR ÍCONOS DENTRO DE V-COL (backup, por si Vuetify lo pisa) ───────── */
 .v-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
 }
 
 /* ───────── Footer Contacto centrado completo ───────── */
@@ -273,9 +298,18 @@ html {
 /* RESPONSIVE PARA CELU */
 @media (max-width: 600px) {
   .title-logo {
-    gap: 6px;        /* un pelín más de aire */
-    margin-left: 10px; /* lo corre del borde pero no tanto */
-    transform: scale(0.9); /* achica todo el bloque levemente */
+    gap: 4px;
+    margin-left: 8px;
+    transform: scale(0.85);
     transform-origin: left center;
+  }
+  
+  .v-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .v-card {
+    margin: 1rem auto !important;
   }
 }

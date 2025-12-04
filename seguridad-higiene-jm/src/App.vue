@@ -6,13 +6,13 @@
   density="comfortable"
   dark
   flat
-  class="px-4"
+  class="px-2 px-sm-4"
 >
 
   <!-- BLOQUE NOMBRE + LOGO (NO se estira, NO se centra, NO se corta) -->
   <v-toolbar-title class="pa-0 ma-0" style="flex: none;">
     <div style="display:inline-flex; align-items:center; gap:6px;">
-      <span class="font-weight-bold text-white">Juan Mateo Gutierrez</span>
+      <span class="font-weight-bold text-white" style="font-size: clamp(1rem, 3vw, 1.2rem);">Juan Mateo Gutierrez</span>
       <v-img
         src="/logo.jpg"
         width="32"
@@ -29,10 +29,10 @@
 
   <!-- BOTONES NORMALES SOLO EN PANTALLA GRANDE -->
   <div class="d-none d-sm-flex" style="gap:4px;">
-    <v-btn href="#about" variant="text">Sobre mí</v-btn>
-    <v-btn href="#services" variant="text">Servicios</v-btn>
-    <v-btn href="#works" variant="text">Trabajos realizados</v-btn>
-    <v-btn href="#contact" variant="text">Contacto</v-btn>
+    <v-btn href="#about" variant="text" size="small">Sobre mí</v-btn>
+    <v-btn href="#services" variant="text" size="small">Servicios</v-btn>
+    <v-btn href="#works" variant="text" size="small">Trabajos realizados</v-btn>
+    <v-btn href="#contact" variant="text" size="small">Contacto</v-btn>
   </div>
 
 </v-app-bar>
@@ -74,9 +74,10 @@
           v-for="(trabajo, i) in trabajos"
           :key="i"
           cols="12"
+          sm="6"
           md="4"
         >
-          <v-card class="mx-auto" max-width="400">
+          <v-card class="mx-auto" style="max-width: 400px; width: 100%;">
             <v-img :src="trabajo.img" height="350" cover></v-img>
             <v-card-title>{{ trabajo.titulo }}</v-card-title>
             <v-card-text>{{ trabajo.descripcion }}</v-card-text>
@@ -93,9 +94,10 @@
           v-for="(servicio, i) in servicios"
           :key="i"
           cols="12"
+          sm="6"
           md="4"
         >
-          <v-card class="mx-auto" max-width="400">
+          <v-card class="mx-auto" style="max-width: 400px; width: 100%;">
             <v-icon :icon="servicio.icon" size="80" color="#1565c0"></v-icon>
             <v-card-title>{{ servicio.titulo }}</v-card-title>
             <v-card-text>{{ servicio.descripcion }}</v-card-text>
@@ -105,7 +107,7 @@
     </v-container>
 
     <!-- Contacto -->
-    <v-footer id="contact" color="#33691E" class="white--text pa-10">
+    <v-footer id="contact" color="#33691E" class="white--text pa-6 pa-sm-10">
       <v-container>
         <v-row align="center" justify="center" class="text-center">
           <v-col cols="12" md="4">
