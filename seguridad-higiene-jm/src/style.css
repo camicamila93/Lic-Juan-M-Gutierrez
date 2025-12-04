@@ -295,6 +295,17 @@ html {
   margin-left: 16px;
 }
 
+/* FORZAR HAMBURGUESA EN MOBILE */
+@media (max-width: 600px) {
+  .d-none.d-sm-flex {
+    display: none !important;
+  }
+  
+  .d-sm-none {
+    display: block !important;
+  }
+}
+
 /* RESPONSIVE PARA CELU */
 @media (max-width: 600px) {
   .title-logo {
