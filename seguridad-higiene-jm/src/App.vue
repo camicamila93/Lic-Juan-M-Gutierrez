@@ -62,7 +62,7 @@
         <p>Soy Licenciado en Seguridad e Higiene con mas de 5 años de experiencia aplicada en los diferentes rubros como agro industria, salud, logística, obras, estaciones de servicio entre otros.
         </p>
         <p> Mi objetivo es garantizar ambientes de trabajo seguros, saludables y eficientes para mejorar la productividad de los trabajadores y de las organizaciones.</p>
-       
+       <p> Así como también cumplir con la normativa legal y exigencias de certificaciones.</p>
       </p>
     </v-container>
 
