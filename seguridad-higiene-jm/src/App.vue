@@ -111,7 +111,7 @@
       <v-container>
         <v-row align="center" justify="center" class="text-center">
           <v-col cols="12" md="4">
-            <p class="mb-2">📞 Teléfono: +54 9 3329 57-033</p>
+            <p class="mb-2">📞 Teléfono: +54 9 3329 57-0339</p>
             <a
             href="https://www.instagram.com/jmg_seguridadehigiene/"
             target="_blank"
