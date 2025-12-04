@@ -152,7 +152,7 @@ export default {
           img: "/Consultoria.png" 
         },
       ],
-     servicios: [
+      servicios: [
   { 
     titulo: "Asesoramiento Integral", 
     descripcion: "Evaluaciones y planes de acción personalizados según las necesidades de tu empresa.", 
