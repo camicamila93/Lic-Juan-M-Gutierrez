@@ -2,39 +2,51 @@
   <v-app>
 
     <v-app-bar
-      class="d-flex align-center"
-      color="#33691E"
-      density="comfortable"
-      dark
-       app
-      flat
-      class="px-4"
-    >
-
-      <v-toolbar-title class="pa-0 ma-0">
-     <div
-  class="title-logo"
+  color="#33691E"
+  density="comfortable"
+  dark
+  flat
+  class="px-4"
 >
-  <span class="font-weight-bold text-white">Juan Mateo Gutierrez</span>
-  <v-img
-    src="/logo.jpg"
-    width="34"
-    height="34"
-    cover
-    style="border-radius: 50%;"
-  />
-</div>
-</v-toolbar-title>
 
+  <!-- BLOQUE NOMBRE + LOGO (NO se estira, NO se centra, NO se corta) -->
+  <v-toolbar-title class="pa-0 ma-0" style="flex: none;">
+    <div style="display:inline-flex; align-items:center; gap:6px;">
+      <span class="font-weight-bold text-white">Juan Mateo Gutierrez</span>
+      <v-img
+        src="/logo.jpg"
+        width="32"
+        height="32"
+        cover
+        style="border-radius:50%;"
+      />
+    </div>
+  </v-toolbar-title>
 
+  <!-- MENU HAMBURGUESA EN CELU -->
+  <v-spacer />
+  <v-app-bar-nav-icon class="d-sm-none" @click="drawer = !drawer" />
 
-      <v-spacer></v-spacer>
+  <!-- BOTONES NORMALES SOLO EN PANTALLA GRANDE -->
+  <div class="d-none d-sm-flex" style="gap:4px;">
+    <v-btn href="#about" variant="text">Sobre mí</v-btn>
+    <v-btn href="#services" variant="text">Servicios</v-btn>
+    <v-btn href="#works" variant="text">Trabajos realizados</v-btn>
+    <v-btn href="#contact" variant="text">Contacto</v-btn>
+  </div>
 
-      <v-btn href="#about" variant="text">Sobre mí</v-btn>
-      <v-btn href="#services" variant="text">Servicios</v-btn>
-      <v-btn href="#works" variant="text">Trabajos realizados</v-btn>
-      <v-btn href="#contact" variant="text">Contacto</v-btn>
-    </v-app-bar>
+</v-app-bar>
+
+<!-- MENU LATERAL PARA MOBILE -->
+<v-navigation-drawer v-model="drawer" temporary>
+  <v-list>
+    <v-list-item href="#about" title="Sobre mí" />
+    <v-list-item href="#services" title="Servicios" />
+    <v-list-item href="#works" title="Trabajos realizados" />
+    <v-list-item href="#contact" title="Contacto" />
+  </v-list>
+</v-navigation-drawer>
+
 
     <!-- Banner principal -->
     <v-container class="hero" fluid>
@@ -118,7 +130,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
