@@ -8,6 +8,7 @@
       dark
        app
       flat
+      class="px-4"
     >
 
       <v-toolbar-title class="pa-0 ma-0">
@@ -117,6 +118,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
