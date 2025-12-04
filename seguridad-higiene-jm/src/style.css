@@ -296,8 +296,8 @@ html {
 }
 
 /* FORZAR HAMBURGUESA EN MOBILE */
-@media (max-width: 600px) {
-  .d-none.d-sm-flex {
+@media (max-width: 960px) {
+  .d-none.d-md-flex {
     display: none !important;
   }
   

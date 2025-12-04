@@ -27,8 +27,8 @@
   <v-spacer />
   <v-app-bar-nav-icon class="d-sm-none" @click="drawer = !drawer" />
 
-  <!-- BOTONES NORMALES SOLO EN PANTALLA GRANDE -->
-  <div class="d-none d-sm-flex" style="gap:4px;">
+  <!-- BOTONES NORMALES SOLO EN PANTALLA GRANDE (md y superior) -->
+  <div class="d-none d-md-flex" style="gap:4px;">
     <v-btn href="#about" variant="text" size="small">Sobre mí</v-btn>
     <v-btn href="#services" variant="text" size="small">Servicios</v-btn>
     <v-btn href="#works" variant="text" size="small">Trabajos realizados</v-btn>
