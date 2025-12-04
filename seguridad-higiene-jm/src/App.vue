@@ -31,7 +31,7 @@
   <div class="d-none d-md-flex" style="gap:4px;">
     <v-btn href="#about" variant="text" size="small">Sobre mí</v-btn>
     <v-btn href="#services" variant="text" size="small">Servicios</v-btn>
-    <v-btn href="#works" variant="text" size="small">Trabajos realizados</v-btn>
+    <v-btn href="#projects" variant="text" size="small">Trabajos realizados</v-btn>
     <v-btn href="#contact" variant="text" size="small">Contacto</v-btn>
   </div>
 
@@ -42,7 +42,7 @@
   <v-list>
     <v-list-item href="#about" title="Sobre mí" />
     <v-list-item href="#services" title="Servicios" />
-    <v-list-item href="#works" title="Trabajos realizados" />
+    <v-list-item href="#projects" title="Trabajos realizados" />
     <v-list-item href="#contact" title="Contacto" />
   </v-list>
 </v-navigation-drawer>
@@ -66,26 +66,6 @@
       </p>
     </v-container>
 
-    <!-- Trabajos realizados -->
-    <v-container id="projects" class="text-center my-12">
-      <h4 class="projects-title mb-4">Trabajos realizados</h4>
-      <v-row>
-        <v-col
-          v-for="(trabajo, i) in trabajos"
-          :key="i"
-          cols="12"
-          sm="6"
-          md="4"
-        >
-          <v-card class="mx-auto" style="max-width: 400px; width: 100%;">
-            <v-img :src="trabajo.img" height="350" cover></v-img>
-            <v-card-title>{{ trabajo.titulo }}</v-card-title>
-            <v-card-text>{{ trabajo.descripcion }}</v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-
     <!-- Servicios -->
     <v-container id="services" class="text-center my-12">
       <h5 class="text-h4 mb-4">Servicios</h5>
@@ -101,6 +81,26 @@
             <v-icon :icon="servicio.icon" size="80" color="#1565c0"></v-icon>
             <v-card-title>{{ servicio.titulo }}</v-card-title>
             <v-card-text>{{ servicio.descripcion }}</v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- Trabajos realizados -->
+    <v-container id="projects" class="text-center my-12">
+      <h4 class="projects-title mb-4">Trabajos realizados</h4>
+      <v-row>
+        <v-col
+          v-for="(trabajo, i) in trabajos"
+          :key="i"
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <v-card class="mx-auto" style="max-width: 400px; width: 100%;">
+            <v-img :src="trabajo.img" height="350" cover></v-img>
+            <v-card-title>{{ trabajo.titulo }}</v-card-title>
+            <v-card-text>{{ trabajo.descripcion }}</v-card-text>
           </v-card>
         </v-col>
       </v-row>
