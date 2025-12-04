@@ -263,3 +263,19 @@ button:focus-visible {
 html {
   scroll-behavior: smooth;
 }
+.title-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 16px;
+}
+
+/* RESPONSIVE PARA CELU */
+@media (max-width: 600px) {
+  .title-logo {
+    gap: 6px;        /* un pelín más de aire */
+    margin-left: 10px; /* lo corre del borde pero no tanto */
+    transform: scale(0.9); /* achica todo el bloque levemente */
+    transform-origin: left center;
+  }
+}

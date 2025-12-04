@@ -6,23 +6,25 @@
       color="#33691E"
       density="comfortable"
       dark
+       app
+      flat
     >
 
-      <!-- Título + Logo -->
-      <v-toolbar-title class="pa-0">
-        <div class="d-flex align-center" >
-          <span class="font-weight-bold text-white">Juan Mateo Gutierrez</span>
-          <v-spacer style="max-width:5px;" />
-          <v-spacer />
-          <v-img
-            src="/logo.jpg"
-            max-width="45"
-            max-height="45"
-            contain
-            class="ml-0 rounded-circle"
-          />
-        </div>
-      </v-toolbar-title>
+      <v-toolbar-title class="pa-0 ma-0">
+     <div
+  class="title-logo"
+>
+  <span class="font-weight-bold text-white">Juan Mateo Gutierrez</span>
+  <v-img
+    src="/logo.jpg"
+    width="34"
+    height="34"
+    cover
+    style="border-radius: 50%;"
+  />
+</div>
+</v-toolbar-title>
+
 
 
       <v-spacer></v-spacer>
