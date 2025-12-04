@@ -304,6 +304,18 @@ html {
   .d-sm-none {
     display: block !important;
   }
+  
+  /* Ocultar botones explícitamente en mobile */
+  .v-app-bar .v-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 961px) {
+  /* Mostrar botones solo en desktop */
+  .v-app-bar .v-btn {
+    display: inline-flex !important;
+  }
 }
 
 /* RESPONSIVE PARA CELU */
