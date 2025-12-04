@@ -312,4 +312,10 @@ html {
   .v-card {
     margin: 1rem auto !important;
   }
+  
+  /* Reducir tamaño de botones en navegación mobile */
+  .d-sm-flex .v-btn {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.5rem !important;
+  }
 }
