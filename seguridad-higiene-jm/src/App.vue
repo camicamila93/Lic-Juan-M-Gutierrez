@@ -113,6 +113,10 @@
         <v-row align="center" justify="center" class="text-center">
           <v-col cols="12" md="4">
             <p class="mb-2">📞 Teléfono: +54 9 3329 57-0339</p>
+            <div class="mb-4">
+              <p class="mb-2">📧 Email:</p>
+              <input type="email" placeholder="Tu email" style="padding: 0.5rem; border-radius: 4px; border: none; width: 100%; max-width: 300px;" />
+            </div>
             <a
             href="https://www.instagram.com/jmg_seguridadehigiene/"
             target="_blank"
@@ -140,17 +144,17 @@ export default {
         { 
           titulo: "Obra industrial", 
           descripcion: "Supervisión de condiciones de seguridad en planta.", 
-          img: "/Obra industrial.png"
+          img: "/images/Obra industrial.png"
         },
         { 
           titulo: "Capacitaciones", 
           descripcion: "Charlas de seguridad laboral para empleados.", 
-          img: "/Capacitaciones.png"
+          img: "/images/Capacitaciones.png"
         },
         { 
           titulo: "Consultorías", 
           descripcion: "Asesoramiento en prevención de riesgos.", 
-          img: "/Consultoria.png" 
+          img: "/images/Consultoria.png" 
         },
       ],
       servicios: [
