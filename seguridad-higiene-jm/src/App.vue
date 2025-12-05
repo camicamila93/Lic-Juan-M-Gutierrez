@@ -77,7 +77,9 @@
           md="4"
         >
           <v-card class="mx-auto" style="max-width: 400px; width: 100%;">
-            <v-icon size="80" color="#1565c0">{{ servicio.icon }}</v-icon>
+            <div style="padding: 1rem; text-align: center;">
+              <i :class="`mdi ${servicio.icon}`" style="font-size: 4rem; color: #1565c0; display: inline-block;"></i>
+            </div>
             <v-card-title>{{ servicio.titulo }}</v-card-title>
             <v-card-text>{{ servicio.descripcion }}</v-card-text>
           </v-card>
