@@ -114,8 +114,7 @@
           <v-col cols="12" md="4">
             <p class="mb-2">📞 Teléfono: +54 9 3329 57-0339</p>
             <div class="mb-4">
-              <p class="mb-2">📧 Email:</p>
-              <input type="email" placeholder="Tu email" style="padding: 0.5rem; border-radius: 4px; border: none; width: 100%; max-width: 300px;" />
+              <p class="mb-2">📧 Email: <a href="mailto:tuemail@ejemplo.com" style="color: white !important;" class="white--text text-decoration-none">tuemail@ejemplo.com</a></p>
             </div>
             <a
             href="https://www.instagram.com/jmg_seguridadehigiene/"
@@ -144,17 +143,17 @@ export default {
         { 
           titulo: "Obra industrial", 
           descripcion: "Supervisión de condiciones de seguridad en planta.", 
-          img: "/images/Obra industrial.png"
+          img: "/images/obra-industrial.png"
         },
         { 
           titulo: "Capacitaciones", 
           descripcion: "Charlas de seguridad laboral para empleados.", 
-          img: "/images/Capacitaciones.png"
+          img: "/images/capacitaciones.png"
         },
         { 
           titulo: "Consultorías", 
           descripcion: "Asesoramiento en prevención de riesgos.", 
-          img: "/images/Consultoria.png" 
+          img: "/images/consultoria.png" 
         },
       ],
       servicios: [
