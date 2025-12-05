@@ -54,6 +54,24 @@
   <h2>Lic. en Seguridad e Higiene</h2>
 </v-container>
 
+    <!-- Mini preview de trabajos (aparece justo debajo del hero) -->
+    <v-container class="projects-preview my-6" fluid>
+      <v-row align="center" justify="center">
+        <v-col
+          v-for="(trabajo, i) in trabajos"
+          :key="`preview-` + i"
+          cols="4"
+          sm="3"
+          md="2"
+          class="preview-col"
+        >
+          <a :href="`#projects`" class="preview-link">
+            <v-img :src="trabajo.img" height="110" contain></v-img>
+          </a>
+        </v-col>
+      </v-row>
+    </v-container>
+
 
     <!-- Sobre mí -->
     <v-container id="about" class="text-center my-12">

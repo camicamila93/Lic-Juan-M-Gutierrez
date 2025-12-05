@@ -92,6 +92,30 @@ button:focus-visible {
   padding: 0;
 }
 
+
+/* Preview de trabajos: miniaturas visibles inmediatamente */
+.projects-preview {
+  background: transparent;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.projects-preview .preview-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+}
+.projects-preview .preview-link {
+  display: block;
+  width: 100%;
+  max-width: 140px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.projects-preview .v-img img {
+  object-fit: cover;
+}
 /* --- 👇 Responsive 👇 --- */
 @media (max-width: 960px) { /* tablet y laptop chica */
   h1 { font-size: 5.6rem; }
@@ -300,9 +324,12 @@ html {
   .d-none.d-md-flex {
     display: none !important;
   }
-  
-  .d-sm-none {
-    display: block !important;
+  .hero {
+    min-height: 55vh;
+  }
+  .projects-preview .preview-link {
+    max-width: 110px;
+  }
   }
   
   /* Ocultar botones explícitamente en mobile */
