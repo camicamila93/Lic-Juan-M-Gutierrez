@@ -114,7 +114,7 @@
           <v-col cols="12" md="4">
             <p class="mb-2">📞 Teléfono: +54 9 3329 57-0339</p>
             <div class="mb-4">
-              <p class="mb-2">📧 Email: <a href="mailto:tuemail@ejemplo.com" style="color: white !important;" class="white--text text-decoration-none">tuemail@ejemplo.com</a></p>
+              <p class="mb-2">📧 Email: <a href="mailto:GutierrezJMateo@gmail.com" style="color: white !important;" class="white--text text-decoration-none">GutierrezJMateo@gmail.com</a></p>
             </div>
             <a
             href="https://www.instagram.com/jmg_seguridadehigiene/"
