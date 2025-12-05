@@ -113,7 +113,7 @@ button:focus-visible {
   button { font-size: 1rem; padding: 0.6em 1em; }
   
   .hero {
-    min-height: 60vh;
+    min-height: 55vh; /* reducir más en celulares para que se vea la sección proyectos */
     padding: 1rem;
   }
 }
@@ -122,7 +122,7 @@ button:focus-visible {
 .hero {
   position: relative;
   width: 100%;  /* ocupará el ancho del contenedor */
-  min-height: 100vh; /* al menos toda la pantalla */
+  min-height: 70vh; /* reducir altura para que la sección siguiente sea visible */
   background-image: url('/banner.png');
   background-size: cover;
   background-position: center;
